@@ -7,5 +7,13 @@
 
 # Atminties perskirstymai
 Naudojama 100000000 elementų.
+| --- | --- |
 | std::vector | 27 | 
 | Vector | 44 | 
+
+
+
+|  | 100000000 |
+| --- | --- |
+| std::vector | 27 | 
+| Vector | 44 |
