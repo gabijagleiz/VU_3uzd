@@ -6,13 +6,6 @@
 | Vector | 0,000891s | 0,00358s | 0,49165s | 0,27418s | 3,029438s |
 
 # Atminties perskirstymai
-Naudojama 100000000 elementų.
-| --- | --- |
-| std::vector | 27 | 
-| Vector | 44 | 
-
-
-
 |  | 100000000 |
 | --- | --- |
 | std::vector | 27 | 
