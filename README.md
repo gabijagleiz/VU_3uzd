@@ -23,10 +23,10 @@ reference back();
 const_reference back() const;
 ```
 - ### rbegin(),
-	```ruby 
+```ruby 
 reverse_iterator rbegin() noexcept;
 const_reverse_iterator rbegin() const noexcept;
-	```
+```
 - ### rend()
 ```ruby
 reverse_iterator rend() noexcept;
