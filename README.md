@@ -12,50 +12,35 @@
 | Vector | 44 |
 
 # Funkcijų pavyzdžiai
-- ### front(), back()
+- ### front()
 ```ruby
-	vector<int> vec;
-vec.push_back(78);
-vec.push_back(16);
-
-vec.front()-=vec.back();
-std::cout << "vec.front() lygus: " << vec.front()<< "\n";
+reference front();
+const_reference front() const;
 ```
-- ### rbegin(), rend()
+- ### back()
 ```ruby
-vector <int> v(10);
-	int i=0;
-	for (vector<int>::reverse_iterator rit=v.rbegin(); rit!=v.rend(); ++rit)
-        *rit=++i;
-    std::cout << "Vector susideda is siu elementu: ";
-    for (vector<int>::reverse_iterator it=v.rbegin(); it!=v.rend(); ++it)
-std::cout<< *it<< " ";
-std::cout << "\n";
+reference back();
+const_reference back() const;
+```
+- ### rbegin(),
+	```ruby 
+reverse_iterator rbegin() noexcept;
+const_reverse_iterator rbegin() const noexcept;
+	```
+- ### rend()
+```ruby
+reverse_iterator rend() noexcept;
+const_reverse_iterator rend() const noexcept;
 ```
 - ### reserve()
-  ```ruby
-  int sz1;
-     	vector<int> vector1;
-  sz1 = vector1.capacity();
-  std::cout << "making vector1 grow:\n";
-  for (int i=0; i<100; ++i) {
-    vector1.push_back(i);
-    if (sz1!=vector1.capacity()) {
-      sz1 = vector1.capacity();
-      std::cout << "capacity changed: " << sz1 << '\n';
-    }
-  }
-  std::cout << '\n';
-
-  vector<int> vector2;
-  sz1 = vector2.capacity();
-  vector2.reserve(100);   // this is the only difference with vector1 above
-  std::cout << "making vector2 grow:\n";
-  for (int i=0; i<100; ++i) {
-    vector2.push_back(i);
-    if (sz1!=vector2.capacity()) {
-      sz1= vector2.capacity();
-      std::cout << "capacity changed: " << sz1 << '\n';
-    }
-  }
+ ```ruby
+template<class T>
+void vector<T>::reserve(size_t mem) {
+	if (mem <= cap) return;
+	if (cap > max_size()) {
+		throw new std::length_error("max length exceeded");
+	}
+	cap = mem;
+	//_reallocate();
+}
 ```
