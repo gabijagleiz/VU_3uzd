@@ -10,3 +10,11 @@
 | --- | --- |
 | std::vector | 27 | 
 | Vector | 44 |
+
+# Funkcijų pavyzdžiai
+- ### front()
+- ### back()
+- ### rbegin()
+- ### rend()
+- ### erase()
+
